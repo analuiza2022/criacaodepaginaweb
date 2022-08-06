@@ -1,0 +1,9 @@
+
+h1, p{color: blue;}
+.btn{padding: 10px; color: white;}
+.btn-1{background-color: green;}
+.btn-2{background-color: blue;}
+.btn-3{background-color: purple;}
+#para1 {background-color: red;}
+body{background-color: black;background-image:url(tesla-1.jpg) ;background-repeat: repeat-y;}
+    

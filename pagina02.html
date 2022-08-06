@@ -1,0 +1,206 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="manifest" href="../site.webmanifest">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/pagina02estilo.css">
+
+</head>
+<body>
+    <header class="menuprincipal">
+        <div class="header-1">
+        <div class="logo">
+            <img src="../img/logo.svg" alt=""/>
+        </div>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/ana.luiza947/"><li><img class="social-logo" src="../img/icons8-instagram.svg" alt=""></li></a>
+            <a href="(11)99026-6887"><li><img class="social-logo" src="../img/icons8-whatsapp.svg" alt=""></li></a>
+            <a href="https://twitter.com/AnaLuiza477"><li><img class="social-logo" src="../img/icons8-twitter.svg" alt=""></li></a>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="header-2">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Páginas</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Procurando algo?"/>
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </main>
+    <div class="slide-principal">
+        <div class="slides">
+            <div id="voltar" class="btn" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></div>
+            <div id="proximo" class="btn" onclick="plusSlides(-2)"><i class="fas fa-chevron-right"></i></div> 
+            <div id="atual" class="images"><img src="https://i.pinimg.com/564x/25/f0/be/25f0be42b3ac027e03554ca40064a65a.jpg" alt=""
+                /></div>
+                <div class="images"><img src="https://i.pinimg.com/564x/a1/5e/f6/a15ef6852a5fd20954080447d0d56976.jpg" alt=""
+                /></div>
+                <div class="images"><img src="https://i.pinimg.com/564x/cf/77/7c/cf777c15e4e1d3729a58e79af58a1abb.jpg" alt=""
+                />
+                </div>
+                <div class="images"><img src="https://i.shafacdn.net/images/230897-65-auto-auto-ROFj3O-j00E.webp" alt=""
+                />
+                </div>  
+            <div class="dots">
+                <div id="1" onclick="currentSlides(1)"></div>
+            <div id="2" onclick="currentSlide(2)"></div>
+            <div id="3" onclick="currentSlide(3)"></div>
+        </div>
+    </div>        
+    </div>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slidesIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides((slideIndex += n)); 
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("images");
+    let dots = document.getElementsByClassName("dots");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        //dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].classList.remove(".imgAtual");
+    }
+    //slides[slidesIndex - 1].style.display = "inline-flex";
+    dots[slideIndex - 1].classList.add("imgAtual");
+}
+
+var quantidade = document.querySelectorAll(".slides .images");
+
+for  (let i = 0; i < quantidade.length; i++) {
+    var div = document.createElement("div");
+    div.id = i;
+    dots.appendChild(div);
+}
+</Script>
+<div class="col-100">
+    <div class="content texto-destaque">
+        <h1>teste <strong>teste</strong></h1>
+        <p>teste teste teste</p>
+
+        <div class="col-3 bloco-texto">
+            <img src="" alt="" />
+            <h3><b>coluna 01</b> teste </h3>
+            <p>teste paragrafo</p>
+        </div>
+        <div class="col-3 bloco-texto">
+            <img src="" alt="" />
+            <h3><b>coluna 01</b> teste </h3>
+            <p>teste paragrafo</p>
+        </div>
+        <div class="col-3 bloco-texto"> style="margin-top:6em"
+            <img src="" alt="" />
+            <h3><b>coluna 01</b> teste </h3>
+            <p>teste paragrafo</p>
+        </div>
+        <div class="col-3 bloco-texto">
+            <img src="" alt="" />
+            <h3><b>coluna 01</b> teste </h3>
+            <p>teste paragrafo</p>
+        </div>
+    </div>
+    <div class="col-100 bloco-imagens-texto">
+        <div class="content" style="margin-left: 24%; float: marginLeft;">
+        <img src="" alt="" />
+    <p><b>lorem ipsum is simply</b></p>
+    <p>teste aleatorio</p>
+   <div class="col-100 bloco-imagens-texto" >
+        <div class="content" style="margin-left: 24%; float: marginLeft;">
+        <img src="" alt="" />
+    <p><b>lorem ipsum is simply</b></p>
+    <p>teste aleatorio</p>
+  <div class="col-100 bloco-imagens-texto" >
+        <div class="content" style="margin-left: 24%; float: marginLeft;">
+        <img src="" alt="" />
+    <p><b>lorem ipsum is simply</b></p>
+    <p>teste aleatorio</p>
+ <div class="col-100 bloco-imagens-texto" >
+        <div class="content" style="margin-left: 24%; float: marginLeft;">
+        <img src="" alt="" />
+    <p><b>lorem ipsum is simply</b></p>
+    <p>teste aleatorio</p>
+</div>
+</div>
+<div class="col-10 bloco-logos">
+    <div class="content">
+        <div class="col-4">
+            <img src="" alt="logo" />
+        </div>
+        <div class="col-10 bloco-logos">
+            <div class="content">
+                <div class="col-4">
+                    <img src="" alt="logo" />
+                </div>
+                <div class="col-10 bloco-logos">
+                    <div class="content">
+                        <div class="col-4">
+                            <img src="" alt="logo" />
+                        </div>
+                        <div class="col-10 bloco-logos">
+                            <div class="content">
+                                <div class="col-4">
+                                    <img src="" alt="logo" />
+        </div>
+    </div>
+</div>
+<fonter>
+    <div class="col-100 fonter">
+        <div class="content">
+            <div class="col-4">
+                <h3><b>Popular Post</b></h3>
+                <p> Criacao de pagina web</p>
+                <p class="clock"> 15/06/2022</p>
+            </div>
+            <div class="col-4">
+                <h3><b>Sobre nós</b></h3>
+            </div>
+            <div class="col-4">
+                <h3><b>Entre em contato</b></h3>
+                <p>Teste</p>
+                <p class="local">Jacarei,SP</p>
+                <P class="emailico">goncalvesbonfimanaluiza@gmail.com</P>
+                <p class="telefoneico">11 99026-6887</p>
+            </div>
+        </div>
+    </div>
+</fonter>
+<div class="col-100 footer-2">
+    <div class="content">
+        <p>Teste</p>
+    </div>
+</div>
+</script>
+</body>
+</html>
